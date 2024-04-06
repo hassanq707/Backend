@@ -13,6 +13,8 @@ app.get("/task", (req, res) => {
         data : todos_data,
     }
     return res.json( allData );
+    console.log("Hassan Qadri")
+
 });
 
 
@@ -28,6 +30,7 @@ app.get('/task/:id' , (req,res) => {
     return res.json({
         new_data : find_todo
     })
+    console.log("Hassan Qadri")
 })
 
 
@@ -39,6 +42,8 @@ app.post("/task", (req, res) => {
       data: new_data,
       message: "Successfully added!",
     });
+    console.log("Hassan Qadri")
+
   });
 
 
@@ -60,11 +65,11 @@ app.put("/task/:id", (req, res) => {
     const update_todo = { ...find_todo, ...data };
 
     return res.json({ data: update_todo });
+    console.log("Hassan Qadri")
+
 
   });
-  
 
-console.log(process.env.PORT)
 
 
 app.listen(process.env.PORT, () => {
